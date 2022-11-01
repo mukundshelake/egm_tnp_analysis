@@ -11,8 +11,8 @@ eosLegacyReReco2016 = '/eos/cms/store/group/phys_egamma/swmukher/egmNtuple_V2ID_
 eosReReco2017 = '/eos/cms/store/group/phys_egamma/swmukher/ntuple_2017_v2/'
 eosReReco2018 = '/eos/cms/store/group/phys_egamma/swmukher/rereco2018/ECAL_NOISE/'
 # UL Summer19
-eosUL2016preVFP  = '/eos/cms/store/group/phys_egamma/tnpTuples/rasharma/2021-02-10/UL2016preVFP/merged/'
-eosUL2016postVFP = '/eos/cms/store/group/phys_egamma/tnpTuples/rasharma/2021-02-10/UL2016postVFP/merged/'
+eosUL2016preVFP  = '/eos/user/m/mshelake/LSFactors/ROOT_Files/UL2016preVFP/merged'
+eosUL2016postVFP = '/eos/user/m/mshelake/LSFactors/ROOT_Files/UL2016postVFP/merged'
 eosUL2017 = '/eos/cms/store/group/phys_egamma/tnpTuples/tomc/2020-05-20/UL2017/merged/'
 eosUL2018 = '/eos/cms/store/group/phys_egamma/tnpTuples/tomc/2020-05-20/UL2018/merged/'
 
@@ -83,32 +83,32 @@ ReReco2018 = {
 
 UL2016_preVFP = {
     'DY_madgraph'              : tnpSample('DY_madgraph',
-                                       eosUL2016preVFP + 'DY_LO_L1matched.root',
+                                       eosUL2016preVFP + 'DY_LO.root',
                                        isMC = True, nEvts =  -1 ),
     'DY_amcatnloext'           : tnpSample('DY_amcatnloext',
-                                       eosUL2016preVFP + 'DY_NLO_L1matched.root',
+                                       eosUL2016preVFP + 'DY_NLO.root',
                                        isMC = True, nEvts =  -1 ),
 
 
-    'data_Run2016B' : tnpSample('data_Run2016B' , eosUL2016preVFP + 'Run2016B_L1matched.root' , lumi = 5.9098246),
-    'data_Run2016C' : tnpSample('data_Run2016C' , eosUL2016preVFP + 'Run2016C_L1matched.root' , lumi = 2.64992914),
-    'data_Run2016D' : tnpSample('data_Run2016D' , eosUL2016preVFP + 'Run2016D_L1matched.root' , lumi = 4.292865604),
-    'data_Run2016E' : tnpSample('data_Run2016E' , eosUL2016preVFP + 'Run2016E_L1matched.root' , lumi = 4.185165152),
-    'data_Run2016F' : tnpSample('data_Run2016F' , eosUL2016preVFP + 'Run2016F_L1matched.root' , lumi = 2.725508364)
+    'data_Run2016B' : tnpSample('data_Run2016B' , eosUL2016preVFP + 'Run2016B.root' , lumi = 5.9098246),
+    'data_Run2016C' : tnpSample('data_Run2016C' , eosUL2016preVFP + 'Run2016C.root' , lumi = 2.64992914),
+    'data_Run2016D' : tnpSample('data_Run2016D' , eosUL2016preVFP + 'Run2016D.root' , lumi = 4.292865604),
+    'data_Run2016E' : tnpSample('data_Run2016E' , eosUL2016preVFP + 'Run2016E.root' , lumi = 4.185165152),
+    'data_Run2016F' : tnpSample('data_Run2016F' , eosUL2016preVFP + 'Run2016F.root' , lumi = 2.725508364)
 }
 
 UL2016_postVFP = {
     'DY_madgraph'              : tnpSample('DY_madgraph',
-                                       eosUL2016postVFP + 'DY_LO_L1matched.root',
+                                       eosUL2016postVFP + 'DY_LO.root',
                                        isMC = True, nEvts =  -1 ),
     'DY_amcatnloext'           : tnpSample('DY_amcatnloext',
-                                       eosUL2016postVFP + 'DY_NLO_L1matched.root',
+                                       eosUL2016postVFP + 'DY_NLO.root',
                                        isMC = True, nEvts =  -1 ),
 
 
-    'data_Run2016F' : tnpSample('data_Run2016F' , eosUL2016postVFP + 'Run2016F_L1merged.root' , lumi = 0.414987426),
-    'data_Run2016G' : tnpSample('data_Run2016G' , eosUL2016postVFP + 'Run2016G_L1matched.root' , lumi = 7.634508755),
-    'data_Run2016H' : tnpSample('data_Run2016H' , eosUL2016postVFP + 'Run2016H_L1matched.root' , lumi = 8.802242522)
+    'data_Run2016F' : tnpSample('data_Run2016F' , eosUL2016postVFP + 'Run2016F.root' , lumi = 0.414987426),
+    'data_Run2016G' : tnpSample('data_Run2016G' , eosUL2016postVFP + 'Run2016G.root' , lumi = 7.634508755),
+    'data_Run2016H' : tnpSample('data_Run2016H' , eosUL2016postVFP + 'Run2016H.root' , lumi = 8.802242522)
     }
 
 UL2017 = {
