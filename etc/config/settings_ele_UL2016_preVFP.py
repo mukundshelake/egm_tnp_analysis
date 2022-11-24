@@ -21,7 +21,7 @@ flags = {
     'passHltEle32WPTightGsfEta2p1' : '(passHltEle32WPTightGsfEta2p1 == 1)'
     }
 
-baseOutDir = 'results/UL2016_preVFP/tnpEleID/'
+baseOutDir = 'results/UL2016_preVFP/tnpEleTrig/'
 
 #############################################################
 ########## samples definition  - preparing the samples
@@ -29,7 +29,7 @@ baseOutDir = 'results/UL2016_preVFP/tnpEleID/'
 ### samples are defined in etc/inputs/tnpSampleDef.py
 ### not: you can setup another sampleDef File in inputs
 import etc.inputs.tnpSampleDef as tnpSamples
-tnpTreeDir = 'tnpEleIDs'
+tnpTreeDir = 'tnpEleTrig'
 
 samplesDef = {
     'data'   : tnpSamples.UL2016_preVFP['data_Run2016B'].clone(),
@@ -67,9 +67,9 @@ weightName = 'weights_2016_run2016.totWeight'
 if not samplesDef['mcNom' ] is None: samplesDef['mcNom' ].set_weight(weightName)
 if not samplesDef['mcAlt' ] is None: samplesDef['mcAlt' ].set_weight(weightName)
 if not samplesDef['tagSel'] is None: samplesDef['tagSel'].set_weight(weightName)
-if not samplesDef['mcNom' ] is None: samplesDef['mcNom' ].set_puTree('/eos/cms/store/group/phys_egamma/asroy/Tag-and-Probe_Tree/UL2016/PU_Trees/preVFP/DY_amcatnloext_ele.pu.puTree.root')
-if not samplesDef['mcAlt' ] is None: samplesDef['mcAlt' ].set_puTree('/eos/cms/store/group/phys_egamma/asroy/Tag-and-Probe_Tree/UL2016/PU_Trees/preVFP/DY_madgraph_ele.pu.puTree.root')
-if not samplesDef['tagSel'] is None: samplesDef['tagSel'].set_puTree('/eos/cms/store/group/phys_egamma/asroy/Tag-and-Probe_Tree/UL2016/PU_Trees/preVFP/DY_amcatnloext_ele.pu.puTree.root')
+if not samplesDef['mcNom' ] is None: samplesDef['mcNom' ].set_puTree('/eos/user/m/mshelake/pileup_weights/UL2016/preVFP/DY_amcatnloext_ele.pu.puTree.root')
+if not samplesDef['mcAlt' ] is None: samplesDef['mcAlt' ].set_puTree('/eos/user/m/mshelake/pileup_weights/UL2016/preVFP/DY_madgraph_ele.pu.puTree.root')
+if not samplesDef['tagSel'] is None: samplesDef['tagSel'].set_puTree('/eos/user/m/mshelake/pileup_weights/UL2016/preVFP/DY_amcatnloext_ele.pu.puTree.root')
 
 
 #############################################################
@@ -102,7 +102,7 @@ additionalCuts = {
 }
 
 #### or remove any additional cut (default)
-#additionalCuts = None
+additionalCuts = None
 
 #############################################################
 ########## fitting params to tune fit by hand if necessary
