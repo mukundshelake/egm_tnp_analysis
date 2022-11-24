@@ -11,8 +11,8 @@ eosLegacyReReco2016 = '/eos/cms/store/group/phys_egamma/swmukher/egmNtuple_V2ID_
 eosReReco2017 = '/eos/cms/store/group/phys_egamma/swmukher/ntuple_2017_v2/'
 eosReReco2018 = '/eos/cms/store/group/phys_egamma/swmukher/rereco2018/ECAL_NOISE/'
 # UL Summer19
-eosUL2016preVFP  = '/eos/user/m/mshelake/LSFactors/ROOT_Files/UL2016preVFP/merged'
-eosUL2016postVFP = '/eos/user/m/mshelake/LSFactors/ROOT_Files/UL2016postVFP/merged'
+eosUL2016preVFP  = '/eos/user/m/mshelake/LSFactors/ROOT_Files/UL2016preVFP/merged/'
+eosUL2016postVFP = '/eos/user/m/mshelake/LSFactors/ROOT_Files/UL2016postVFP/merged/'
 eosUL2017 = '/eos/cms/store/group/phys_egamma/tnpTuples/tomc/2020-05-20/UL2017/merged/'
 eosUL2018 = '/eos/cms/store/group/phys_egamma/tnpTuples/tomc/2020-05-20/UL2018/merged/'
 
