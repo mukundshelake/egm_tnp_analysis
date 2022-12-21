@@ -63,7 +63,7 @@ if not samplesDef['tagSel'] is None:
 
 
 ## set MC weight, can use several pileup rw for different data taking periods
-weightName = 'weights_2016_run2016.totWeight'
+weightName = 'weights_2016_runBCDEF.totWeight'
 if not samplesDef['mcNom' ] is None: samplesDef['mcNom' ].set_weight(weightName)
 if not samplesDef['mcAlt' ] is None: samplesDef['mcAlt' ].set_weight(weightName)
 if not samplesDef['tagSel'] is None: samplesDef['tagSel'].set_weight(weightName)
