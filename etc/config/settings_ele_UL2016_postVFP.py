@@ -18,9 +18,10 @@ flags = {
     'passingMVA94XwpLisoV2'    : '(passingMVA94XwpLisoV2 == 1)',
     'passingMVA94XwpLnoisoV2'  : '(passingMVA94XwpLnoisoV2 == 1)',
     'passingMVA94XwpHZZisoV2'  : '(passingMVA94XwpHZZisoV2 == 1)',
+    'passHltEle32WPTightGsfEta2p1' : '(passHltEle32WPTightGsfEta2p1 == 1)'
     }
 
-baseOutDir = 'results/UL2016_postVFP/tnpEleID/'
+baseOutDir = 'results/UL2016_postVFP/tnpEleTrig/'
 
 #############################################################
 ########## samples definition  - preparing the samples
@@ -28,7 +29,7 @@ baseOutDir = 'results/UL2016_postVFP/tnpEleID/'
 ### samples are defined in etc/inputs/tnpSampleDef.py
 ### not: you can setup another sampleDef File in inputs
 import etc.inputs.tnpSampleDef as tnpSamples
-tnpTreeDir = 'tnpEleIDs'
+tnpTreeDir = 'tnpEleTrig'
 
 samplesDef = {
     'data'   : tnpSamples.UL2016_postVFP['data_Run2016F'].clone(),
@@ -61,13 +62,13 @@ if not samplesDef['tagSel'] is None:
 
 
 ## set MC weight, can use several pileup rw for different data taking periods
-weightName = 'weights_2016_run2016.totWeight'
+weightName = 'weights_2016_runFGH.totWeight'
 if not samplesDef['mcNom' ] is None: samplesDef['mcNom' ].set_weight(weightName)
 if not samplesDef['mcAlt' ] is None: samplesDef['mcAlt' ].set_weight(weightName)
 if not samplesDef['tagSel'] is None: samplesDef['tagSel'].set_weight(weightName)
-if not samplesDef['mcNom' ] is None: samplesDef['mcNom' ].set_puTree('/eos/cms/store/group/phys_egamma/asroy/Tag-and-Probe_Tree/UL2016/PU_Trees/postVFP/DY_amcatnloext_ele.pu.puTree.root')
-if not samplesDef['mcAlt' ] is None: samplesDef['mcAlt' ].set_puTree('/eos/cms/store/group/phys_egamma/asroy/Tag-and-Probe_Tree/UL2016/PU_Trees/postVFP/DY_madgraph_ele.pu.puTree.root')
-if not samplesDef['tagSel'] is None: samplesDef['tagSel'].set_puTree('/eos/cms/store/group/phys_egamma/asroy/Tag-and-Probe_Tree/UL2016/PU_Trees/postVFP/DY_amcatnloext_ele.pu.puTree.root')
+if not samplesDef['mcNom' ] is None: samplesDef['mcNom' ].set_puTree('/eos/user/m/mshelake/ScaleFactorCalc/PileupWeights/UL2016postVFP/DY_amcatnloext_ele.pu.puTree.root')
+if not samplesDef['mcAlt' ] is None: samplesDef['mcAlt' ].set_puTree('/eos/user/m/mshelake/ScaleFactorCalc/PileupWeights/UL2016postVFP/DY_madgraph_ele.pu.puTree.root')
+if not samplesDef['tagSel'] is None: samplesDef['tagSel'].set_puTree('/eos/user/m/mshelake/ScaleFactorCalc/PileupWeights/UL2016postVFP/DY_amcatnloext_ele.pu.puTree.root')
 
 
 #############################################################
@@ -84,7 +85,7 @@ biningDef = [
 ########## Cuts definition for all samples
 #############################################################
 ### cut
-cutBase   = 'tag_Ele_pt > 35 && abs(tag_sc_eta) < 2.17 && el_q*tag_Ele_q < 0'
+cutBase   = 'tag_Ele_pt > 32 && abs(tag_sc_eta) < 2.1 && el_q*tag_Ele_q < 0'
 
 additionalCuts = { 
     0 : 'tag_Ele_trigMVA > 0.92 ',
@@ -100,7 +101,7 @@ additionalCuts = {
 }
 
 #### or remove any additional cut (default)
-#additionalCuts = None
+additionalCuts = None
 
 #############################################################
 ########## fitting params to tune fit by hand if necessary

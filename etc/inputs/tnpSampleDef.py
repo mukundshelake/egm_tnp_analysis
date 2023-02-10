@@ -11,8 +11,8 @@ eosLegacyReReco2016 = '/eos/cms/store/group/phys_egamma/swmukher/egmNtuple_V2ID_
 eosReReco2017 = '/eos/cms/store/group/phys_egamma/swmukher/ntuple_2017_v2/'
 eosReReco2018 = '/eos/cms/store/group/phys_egamma/swmukher/rereco2018/ECAL_NOISE/'
 # UL Summer19
-eosUL2016preVFP  = '/eos/user/m/mshelake/LSFactors/ROOT_Files/UL2016preVFP/merged/'
-eosUL2016postVFP = '/eos/user/m/mshelake/LSFactors/ROOT_Files/UL2016postVFP/merged/'
+eosUL2016preVFP  = '/eos/user/m/mshelake/ScaleFactorCalc/TnPTuples/UL2016preVFP/merged/'
+eosUL2016postVFP = '/eos/user/m/mshelake/ScaleFactorCalc/TnPTuples/UL2016postVFP/merged/'
 eosUL2017 = '/eos/cms/store/group/phys_egamma/tnpTuples/tomc/2020-05-20/UL2017/merged/'
 eosUL2018 = '/eos/cms/store/group/phys_egamma/tnpTuples/tomc/2020-05-20/UL2018/merged/'
 
@@ -126,7 +126,6 @@ UL2017 = {
     'data_Run2017E' : tnpSample('data_Run2017E' , eosUL2017 + 'Run2017E.root' , lumi = 9.313642402),
     'data_Run2017F' : tnpSample('data_Run2017F' , eosUL2017 + 'Run2017F.root' , lumi = 13.510934811),
 }
-
 UL2018 = {
     'DY_madgraph'              : tnpSample('DY_madgraph',
                                        eosUL2018 + 'DY_LO.root',

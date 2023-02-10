@@ -67,9 +67,9 @@ weightName = 'weights_2016_runBCDEF.totWeight'
 if not samplesDef['mcNom' ] is None: samplesDef['mcNom' ].set_weight(weightName)
 if not samplesDef['mcAlt' ] is None: samplesDef['mcAlt' ].set_weight(weightName)
 if not samplesDef['tagSel'] is None: samplesDef['tagSel'].set_weight(weightName)
-if not samplesDef['mcNom' ] is None: samplesDef['mcNom' ].set_puTree('/eos/user/m/mshelake/pileup_weights/UL2016/preVFP/DY_amcatnloext_ele.pu.puTree.root')
-if not samplesDef['mcAlt' ] is None: samplesDef['mcAlt' ].set_puTree('/eos/user/m/mshelake/pileup_weights/UL2016/preVFP/DY_madgraph_ele.pu.puTree.root')
-if not samplesDef['tagSel'] is None: samplesDef['tagSel'].set_puTree('/eos/user/m/mshelake/pileup_weights/UL2016/preVFP/DY_amcatnloext_ele.pu.puTree.root')
+if not samplesDef['mcNom' ] is None: samplesDef['mcNom' ].set_puTree('/eos/user/m/mshelake/ScaleFactorCalc/PileupWeights/UL2016preVFP/DY_amcatnloext_ele.pu.puTree.root')
+if not samplesDef['mcAlt' ] is None: samplesDef['mcAlt' ].set_puTree('/eos/user/m/mshelake/ScaleFactorCalc/PileupWeights/UL2016preVFP/DY_madgraph_ele.pu.puTree.root')
+if not samplesDef['tagSel'] is None: samplesDef['tagSel'].set_puTree('/eos/user/m/mshelake/ScaleFactorCalc/PileupWeights/UL2016preVFP/DY_amcatnloext_ele.pu.puTree.root')
 
 
 #############################################################
